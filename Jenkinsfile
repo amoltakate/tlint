@@ -29,7 +29,7 @@ pipeline {
       steps {
         sh """
           cd ${TF_DIR}
-          terraform init 
+          terraform init -reconfigure
           terraform validate
         """
       }
